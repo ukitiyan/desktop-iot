@@ -1,0 +1,31 @@
+aws:
+    iot:
+        # Client endpoint, e.g. <prefix>.iot.us-east-1.amazonaws.com
+        clientEndpoint: 
+        # Client ID, unique client ID per connection
+        clientId: 
+        # Client certificate file, e.g. /aws/xxxxxx-certificate.pem.crt
+        certificateFile: 
+        # Client private key file, e.g. /aws/xxxxxx-private.pem.key
+        privateKeyFile: 
+        # Thing name
+        thingName: 
+iot:
+    topic: 
+        # publish healthcheck topic name, e.g. topic/healthcheck
+        healthcheck: topic/healthcheck
+        # subscribe shutdown topic name, e.g. topic/shutdown
+        shutdown: topic/shutdown
+        # publish shutdown-notify topic name, e.g. topic/shutdownNotify
+        shutdownNotify: topic/shutdownNotify
+    payload: 
+        # publish healthcheck topic payload, e.g. '{"status": "Active"}'
+        healthcheck: '{"status": "Active"}'
+        # publish shutdown-notify topic payload, e.g. '{"status": "Shutdown"}'
+        shutdownNotify: '{"status": "Shutdown"}'
+    settings:
+        # health check wait for second, e.g. 3600
+        healthcheckWait: 3600
+        # is shutdown true or false, e.g. true
+        shutdown: true
+        
